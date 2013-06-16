@@ -15,11 +15,14 @@ setInterval(function(){
 
     console.log($characters);
 
-    if ($characters in blacklist)
-        console.log("blacklist match!");
+    blacklist.forEach(function (name) {
 
-    if ($last_msg != $characters) { 
-    }
+        if ($characters.indexOf(name) !== -1) {
+
+            console.log("You've used blacklisted phrase " + name);
+            $characters = "";
+        }
+    });
 
     $last_msg = $characters;
 

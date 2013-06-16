@@ -10,10 +10,6 @@
         "js": [
             "blacklist.js",
             "jquery.js",
-<<<<<<< HEAD
-=======
-            "blacklist.js",
->>>>>>> daa41bc07a4cf1e8ebcdda743c622d2655a6c42b
             "goggles.js"
         ]
       }],
