@@ -16,6 +16,19 @@ $(div).css('pointer-events', 'none');
 $(div).css('z-index', '10000000000000');
 document.body.appendChild(div);
 //$(div).hide();
+//
+
+var dark = document.createElement("div");
+dark.style.width = "100%";
+dark.style.height = "100%";
+dark.style.top = "0px";
+dark.style.left = "0px";
+dark.style.position = "fixed";
+dark.style.opacity = "0";
+
+$(dark).css('z-index', '100000000000000');
+$(dark).css('background-color', 'black');
+document.body.appendChild(dark);
 
 /*
 var overlay = document.createElement("overlay");
@@ -111,10 +124,11 @@ setInterval(function(){
             hits += 1;
         }
 
-        if (hits > 2) {
+        if (hits > 0) {
 
             div.style.opacity = 1;
             jQuery(div).css('pointer-events', 'auto');
+            dark.style.opacity = 0.5;
         }
 
 }, 1000);
