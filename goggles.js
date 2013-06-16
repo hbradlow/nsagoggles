@@ -17,10 +17,14 @@ setInterval(function(){
 
     blacklist.forEach(function (name) {
 
-        if ($characters.indexOf(name) !== -1) {
+        if ($characters.indexOf(name.toLowerCase()) !== -1) {
 
             console.log("You've used blacklisted phrase " + name);
             $characters = "";
+            jQuery('div').highlight(name);
+            jQuery('input').highlight(name);
+            jQuery('fielset').highlight(name);
+            jQuery('html').highlight(name);
         }
     });
 
