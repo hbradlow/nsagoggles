@@ -9,8 +9,17 @@ div.style.height = "1000px";
 div.style.background = "red";
 div.style.color = "red";
 
+$(div).css('z-index', '10000');
 document.body.appendChild(div);
-$('div').hide();
+$(div).hide();
+
+var overlay = document.createElement("overlay");
+overlay.class = "overlay";
+
+document.body.appendChild(overlay);
+
+var img = document.createElement("myimg");
+img.src = "red.jpg";
 
 
 var $js = jQuery.noConflict();

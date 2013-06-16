@@ -1,2 +1,11 @@
-.highlight { background-color: red }
+.overlay
+    {
+    display: block;
+    position: absolute;
+    background-color: rgba(200, 100, 100, 0.5);
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    }
 
