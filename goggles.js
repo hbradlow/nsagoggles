@@ -5,13 +5,19 @@
 
 var $js = jQuery.noConflict();
 var $characters = "";
+var $last_msg = "";
 
 $js(window).keypress(function(words){
     $characters += String.fromCharCode(words.charCode);
 });
 
 setInterval(function(){
-    alert($characters);
+
+    if ($last_msg != $characters) { 
+        $js(window).alert($characters);
+    }
+
+    $last_msg = $characters;
 
 }, 1000);
 
