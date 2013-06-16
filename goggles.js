@@ -28,14 +28,15 @@ setInterval(function(){
 
 }, 1000);
 
-var num_words = 0;
-var text = jQuery('html').text();
-var str = text.split(" ");
-jQuery.each(str,function(index,item){ 
-    if(jQuery.inArray(item.toLowerCase(),blacklist)!=-1){
-        console.log(item);
-        num_words += 1;
-    }
-});
-
-alert(num_words + " terror words");
+setTimeout(function(){
+    var num_words = 0;
+    var text = jQuery('html').text().toLowerCase();
+    console.log(text);
+    jQuery.each(blacklist,function(index,item){ 
+        if(text.indexOf(item.toLowerCase())!=-1){
+            console.log(item);
+            num_words += 1;
+        }
+    });
+    console.log(num_words + " terror words");
+}, 2000);
