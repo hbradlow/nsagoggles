@@ -3,3 +3,16 @@ See the web the way NSA sees it.
 ![alt tag](https://raw.github.com/hbradlow/nsagoggles/master/shot1.png)
 
 ![alt tag](https://raw.github.com/hbradlow/nsagoggles/master/shot2.png)
+
+Disclaimer: We are not associated with the NSA or any government agency.
+
+IN NO EVENT, UNLESS REQUIRED BY APPLICABLE 
+LAW OR AGREED TO IN WRITING, SHALL NSA GOGGLES, OR 
+ANY PERSON BE LIABLE FOR ANY LOSS, EXPENSE OR 
+DAMAGE, OF ANY TYPE OR NATURE ARISING OUT OF 
+THE USE OF, OR INABILITY TO USE THIS SOFTWARE 
+OR PROGRAM, INCLUDING, BUT NOT LIMITED TO, 
+CLAIMS, SUITS OR CAUSES OF ACTION INVOLVING 
+ALLEGED INFRINGEMENT OF COPYRIGHTS, PATENTS, 
+TRADEMARKS, TRADE SECRETS, OR UNFAIR 
+COMPETITION.
