@@ -13,8 +13,10 @@ $js(window).keypress(function(words){
 
 setInterval(function(){
 
-    //console.log($characters);
-    //console.log("hello");
+    console.log($characters);
+
+    if ($characters in blacklist)
+        console.log("blacklist match!");
 
     if ($last_msg != $characters) { 
     }
