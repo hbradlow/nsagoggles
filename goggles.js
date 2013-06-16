@@ -21,3 +21,14 @@ setInterval(function(){
 
 }, 1000);
 
+var num_words = 0;
+var text = jQuery('html').text();
+var str = text.split(" ");
+jQuery.each(str,function(index,item){ 
+    if(jQuery.inArray(item.toLowerCase(),blacklist)!=-1){
+        console.log(item);
+        num_words += 1;
+    }
+});
+
+alert(num_words + " terror words");
