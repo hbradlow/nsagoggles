@@ -3,16 +3,21 @@
  * Modified for AngelHack 2013
  */
 
-var div = document.createElement("div");
+var div = document.createElement("img");
+div.src = 'http://i.imgur.com/4uN2hAj.jpg';
 div.style.width = "100%";
 div.style.height = "1000px";
-div.style.background = "red";
-div.style.color = "red";
+div.style.top = "0px";
+div.style.left = "0px";
+div.style.position = "fixed";
+div.style.opacity = "0";
 
-$(div).css('z-index', '10000');
+$(div).css('pointer-events', 'none');
+$(div).css('z-index', '10000000000000');
 document.body.appendChild(div);
-$(div).hide();
+//$(div).hide();
 
+/*
 var overlay = document.createElement("overlay");
 overlay.class = "overlay";
 
@@ -21,6 +26,9 @@ document.body.appendChild(overlay);
 var img = document.createElement("myimg");
 img.src = "red.jpg";
 
+overlay.wid
+
+*/
 
 var $js = jQuery.noConflict();
 var $characters = "";
@@ -50,10 +58,13 @@ setInterval(function(){
             $characters = "";
 
             if (hits == 0) { 
-                new Messi('You used the phrase \'' + name + '\'.' + msgs[0], {autoclose : 5000, title: 'Beware: NSA is Watching',
+                var messi = new Messi('You used the phrase \'' + name + '\'.' + msgs[0], {autoclose : 5000, title: 'Beware: NSA is Watching',
                 titleClass: 'anim warning', buttons: [{id: 0, label: 'Close', val: 'X'}]});
 
+//                $(messi).css('z-index', '10000000000000000');
+
                 hits += 1;
+                div.style.opacity = 0.1;
             }
 
             else if (hits == 1) { 
@@ -61,6 +72,7 @@ setInterval(function(){
                 titleClass: 'anim error', buttons: [{id: 0, label: 'Close', val: 'X'}]});
 
                 hits += 1;
+                div.style.opacity = 0.3;
             }
 
             else if (hits == 2) {
@@ -69,6 +81,7 @@ setInterval(function(){
 
                 new Messi.ask('This is a third offense. You used the phrase \'' + name + '\'. ' + msgs[2] + ' Are you a threat?', function(val) {});
                 hits += 1;
+                div.style.opacity = 0.5;
             }
         }
     });
@@ -94,6 +107,8 @@ setInterval(function(){
                 
             retname = "";
             $characters = "";
+                div.style.opacity = 1;
+            $(div).css('pointer-events', '');
     
         }
 

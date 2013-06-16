@@ -154,7 +154,7 @@ Messi.prototype = {
     // obtenemos el centro de la pantalla si la opción de centrar está activada
     if(this.options.center) this.options.viewport = this.viewport(jQuery('.messi-box', this.messi));
     
-    this.messi.css({top: this.options.viewport.top, left: this.options.viewport.left, 'z-index': this.options.zIndex + jQuery('.messi').length}).show().animate({opacity: 1}, 300);
+    this.messi.css({top: this.options.viewport.top, left: this.options.viewport.left, 'z-index': '10000000000000000' + jQuery('.messi').length}).show().animate({opacity: 1}, 300);
     
     // cancelamos el scroll
     //document.documentElement.style.overflow = "hidden";
