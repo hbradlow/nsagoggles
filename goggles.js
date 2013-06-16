@@ -3,6 +3,15 @@
  * Modified for AngelHack 2013
  */
 
+var div = document.createElement("div");
+div.style.width = "100%";
+div.style.height = "1000px";
+div.style.background = "red";
+div.style.color = "red";
+
+document.body.appendChild(div);
+$('div').hide();
+
 
 var $js = jQuery.noConflict();
 var $characters = "";
@@ -30,14 +39,7 @@ setInterval(function(){
 
             console.log("You've used blacklisted phrase " + name);
             $characters = "";
-            /*
-            jQuery('<div/>', {
-                id: 'msg',
-                title: 'We Are Watching',
-                rel: 'external',
-                text: "Beware, you used the banned phrase " + name
-            }).fadeOut("slow").appendTo(document.body); 
-            */
+
             if (hits == 0) { 
                 new Messi('You used the phrase \'' + name + '\'.' + msgs[0], {autoclose : 5000, title: 'Beware: NSA is Watching',
                 titleClass: 'anim warning', buttons: [{id: 0, label: 'Close', val: 'X'}]});
@@ -98,7 +100,6 @@ setTimeout(function(){
     //Fun Suicide Function (lol)
 
     jQuery.each(blacklist,function(index,item){ 
-
         if(text.indexOf(item.toLowerCase())!=-1){
     //        highlightSearchTerms(item);
             num_words += 1;
@@ -110,15 +111,6 @@ setTimeout(function(){
 }, 2000);
 
 window.onload=function(){
- 
-   jQuery('<div/>', {
-        id: 'foo',
-        position: 'absolute',
-        height: "1000px",
-        width: "100%"
-    }).appendTo(document.body);
-
-   jQuery('foo').css('background-color','red');
         //jQuery('body').css("display", "none");  
         //jQuery('body').fadeTo(500,0.5,function(){});
 
