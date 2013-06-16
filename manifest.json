@@ -8,9 +8,9 @@
     "matches": ["http://*/*", "https://*/*"],
         "css": [],
         "js": [
+            "blacklist.js",
             "jquery.js",
-            "goggles.js",
-            "blacklist.js"
+            "goggles.js"
         ]
       }],
       "permissions": [
