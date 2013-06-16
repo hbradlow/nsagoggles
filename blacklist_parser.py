@@ -11,6 +11,10 @@ with open("blacklist_comma.txt") as f:
     data = f.read()
     for item in data.split(","):
         blacklist.append(item.strip().lower())
+
+commonWords = set([word.strip().lower() for word in open("commonWords")])
+blacklist = [word for word in blacklist if not word in commonWords]
+
 with open("blacklist.js","w") as f:
     f.write("var blacklist = ")
     f.write(str(blacklist))
