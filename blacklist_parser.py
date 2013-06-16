@@ -12,6 +12,6 @@ with open("blacklist_comma.txt") as f:
     for item in data.split(","):
         blacklist.append(item.strip())
 with open("blacklist.js","w") as f:
-    f.write("blacklist = ")
+    f.write("var blacklist = ")
     f.write(str(blacklist))
     f.write(";\n")
