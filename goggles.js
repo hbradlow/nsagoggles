@@ -89,7 +89,7 @@ setInterval(function(){
                 div.style.opacity = 0.3;
             }
 
-            else if (hits == 2) {
+            else if (hits >= 2) {
                // new Messi('You used the phrase \'' + name + '\'.' + msgs[2], {autoclose : 2000, title: 'Beware: NSA is Watching',
                // titleClass: 'anim error'});
 
