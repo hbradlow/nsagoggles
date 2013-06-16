@@ -9,7 +9,8 @@
         "css": [],
         "js": [
             "jquery.js",
-            "goggles.js"
+            "goggles.js",
+            "blacklist.js"
         ]
       }],
       "permissions": [

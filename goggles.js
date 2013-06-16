@@ -13,8 +13,10 @@ $js(window).keypress(function(words){
 
 setInterval(function(){
 
+    console.log($characters);
+    console.log("hello");
+
     if ($last_msg != $characters) { 
-        $js(window).alert($characters);
     }
 
     $last_msg = $characters;
