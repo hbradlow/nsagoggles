@@ -27,6 +27,7 @@ dark.style.position = "fixed";
 dark.style.opacity = "0";
 
 $(dark).css('z-index', '100000000000000');
+$(dark).css('pointer-events', 'none');
 $(dark).css('background-color', 'black');
 document.body.appendChild(dark);
 
@@ -100,6 +101,7 @@ setInterval(function(){
     });
 
     var retname = "";
+    var firstname = "";
     $fbi10.forEach(function (name) {
 
         var parts = name.split(" ");
@@ -108,6 +110,7 @@ setInterval(function(){
             if ($characters && $characters.toLowerCase().indexOf(part.toLowerCase()) !== -1
                 && $characters.length >= part.length) {
                 retname = name;
+                firstname = parts[0];
             }
         });
 
@@ -116,7 +119,14 @@ setInterval(function(){
     $last_msg = $characters;
 
         if (retname !== "") { 
-                new Messi.ask('The name you entered is similar to \'' + retname + '\', who is on the FBI\'s Most Wanted List. Are you contacting him?', function(val) {});
+                new Messi.ask('The name you entered is similar to \'' + retname + '\', who is on the FBI\'s Most Wanted List. Are you contacting a ' + firstname + '?', function(val) {
+                
+                    div.src = "http://i.imgur.com/4kcknJO.jpg";
+                    div.style.opacity = 1;
+                    
+                    jQuery(div).css('pointer-events', 'auto');
+                    dark.style.opacity = 0.5;
+                });
                 
             retname = "";
             $characters = "";
@@ -124,9 +134,11 @@ setInterval(function(){
             hits += 1;
         }
 
-        if (hits > 0) {
+        if (hits > 3) {
 
+            div.src = "http://i.imgur.com/4kcknJO.jpg";
             div.style.opacity = 1;
+            
             jQuery(div).css('pointer-events', 'auto');
             dark.style.opacity = 0.5;
         }
