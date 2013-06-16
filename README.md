@@ -1,1 +1,1 @@
-See the web the NSA sees it. 
+See the web the way NSA sees it. 
