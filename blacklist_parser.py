@@ -14,4 +14,4 @@ with open("blacklist_comma.txt") as f:
 with open("blacklist.js","w") as f:
     f.write("blacklist = ")
     f.write(str(blacklist))
-    f.write("\n")
+    f.write(";\n")
