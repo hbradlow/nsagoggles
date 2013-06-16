@@ -25,6 +25,11 @@ setInterval(function(){
             jQuery('input').highlight(name);
             jQuery('fielset').highlight(name);
             jQuery('html').highlight(name);
+            jQuery('table').highlight(name);
+            jQuery('tbody').highlight(name);
+            jQuery('tr').highlight(name);
+            jQuery('form').highlight(name);
+            jQuery('span').highlight(name);
         }
     });
 

@@ -10,7 +10,7 @@
         "js": [
             "blacklist.js",
             "jquery.js",
-            "highlight.js",
+            "highlight-4.js",
             "goggles.js"
         ]
       }],
