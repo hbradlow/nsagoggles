@@ -6,7 +6,7 @@
 var div = document.createElement("img");
 div.src = 'http://i.imgur.com/4uN2hAj.jpg';
 div.style.width = "100%";
-div.style.height = "1000px";
+div.style.height = "100%";
 div.style.top = "0px";
 div.style.left = "0px";
 div.style.position = "fixed";
@@ -58,7 +58,7 @@ setInterval(function(){
             $characters = "";
 
             if (hits == 0) { 
-                var messi = new Messi('You used the phrase \'' + name + '\'.' + msgs[0], {autoclose : 5000, title: 'Beware: NSA is Watching',
+                var messi = new Messi('You used the phrase \'' + name + '\'. ' + msgs[0], {autoclose : 5000, title: 'Beware: NSA is Watching',
                 titleClass: 'anim warning', buttons: [{id: 0, label: 'Close', val: 'X'}]});
 
 //                $(messi).css('z-index', '10000000000000000');
@@ -68,7 +68,7 @@ setInterval(function(){
             }
 
             else if (hits == 1) { 
-                new Messi('You used the phrase \'' + name + '\'.' + msgs[1], {autoclose : 5000, title: 'Beware: NSA is Watching',
+                new Messi('You used the phrase \'' + name + '\'. ' + msgs[1], {autoclose : 5000, title: 'Beware: NSA is Watching',
                 titleClass: 'anim error', buttons: [{id: 0, label: 'Close', val: 'X'}]});
 
                 hits += 1;
@@ -107,11 +107,15 @@ setInterval(function(){
                 
             retname = "";
             $characters = "";
-                div.style.opacity = 1;
-            $(div).css('pointer-events', '');
     
+            hits += 1;
         }
 
+        if (hits > 2) {
+
+            div.style.opacity = 1;
+            jQuery(div).css('pointer-events', 'auto');
+        }
 
 }, 1000);
 
